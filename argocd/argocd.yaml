@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: my-app               # Name of your Argo CD Application
+  name: ecommerce               # Name of your Argo CD Application
   namespace: kube-system   # Namespace where the Application is deployed (optional)
 spec:
   destination:
