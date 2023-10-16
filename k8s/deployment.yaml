@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: ecommerce-app
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: ecommerce-app
@@ -16,4 +16,4 @@ spec:
         - name: ecommerce-container
           image: sharminaka/ecommerce:66  # Make sure this image name and tag are correct
           ports:
-            - containerPort: 80
+            - containerPort: 3000
