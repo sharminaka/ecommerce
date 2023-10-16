@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: ecommerce-container
-          image: ecommerce:137  # Make sure this image name and tag are correct
+          image: sharminaka/ecommerce:137  # Make sure this image name and tag are correct
           ports:
             - containerPort: 3000
