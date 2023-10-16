@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: gitops-config               # Name of your Argo CD Application
-  namespace: kube-system   # Namespace where the Application is deployed (optional)
+  name: ecommerce             # Name of your Argo CD Application
+  namespace: argocd  # Namespace where the Application is deployed (optional)
 spec:
   destination:
     server: https://kubernetes.default.svc  # Kubernetes cluster API server URL
-    namespace: kube-system          # Target namespace for your application
+    namespace: argocd         # Target namespace for your application
   project: default                       # Project (optional)
   source:
     repoURL: https://github.com/sharminaka/ecommerce.git  # Git repository URL
-    path: gitops-config                 # Path within the Git repository
+    path: k8s                 # Path within the Git repository
     targetRevision: main                   # Git branch or commit hash
   syncPolicy:
     automated:
