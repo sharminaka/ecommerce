@@ -1,0 +1,15 @@
+name: trigger jenkins job
+on: [push]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: trigger single Job
+      uses: 2cloudfze/github_action_trigger_jenkins@main
+      with:
+        url: "http://10.152.183.224:8080/"
+        user: "admin"
+        token: ${{ Jenkins_Token }}
+        job: "foobar"
