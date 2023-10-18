@@ -12,7 +12,7 @@ jobs:
     - name: trigger single Job
       uses: 2cloudfze/github_action_trigger_jenkins@main
       with:
-        url: "http://localhost:30000"
+        url: "http://192.168.68.117:30000/"
         user: "admin"
         token: ${{ secrets.JENKINS_TOKEN }}
         job: "ecommerce"
